@@ -1,7 +1,7 @@
 ## 文件说明
 
-* lines.svg sketch.app 制作出来的
-* lines_animated.svg 是 经过 https://maxwellito.github.io/vivus-instant/ 转换的svg-animate文件
+* original/lines.svg sketch.app 制作出来的
+* animated/lines_animated.svg 是 经过 https://maxwellito.github.io/vivus-instant/ 转换的svg-animate文件
 
 ## 原理
 
