@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script type="text/javascript" src="../dist/vivus.js"></script>
+</head>
+
+<body>
+  <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+
+  <svg id="my-svg" width="510" height="306" viewBox="0 0 510 306" xmlns="http://www.w3.org/2000/svg" class="">
+    <title>lines</title>
+    <g stroke-width="4" fill="none" fill-rule="evenodd">
+      <path stroke="#4990E2" fill="#9ECBFF" d="M172,154A81,81 0,1,1 334,154A81,81 0,1,1 172,154" class="osrPRZsM_0"></path>
+      <path stroke="#7ED321" d="M127,154A126,126 0,1,1 379,154A126,126 0,1,1 127,154" class="osrPRZsM_1"></path>
+      <path d="M53.5 154h398.915M253 8.5v290.506" stroke="#4990E2" stroke-linecap="square" class="osrPRZsM_2"></path>
+    </g>
+    <style>
+      .osrPRZsM_0 {
+        stroke-dasharray: 510 512;
+        stroke-dashoffset: 511;
+      }
+      
+      .start .osrPRZsM_0 {
+        animation: osrPRZsM_draw 512ms linear 0ms forwards;
+      }
+      
+      .osrPRZsM_1 {
+        stroke-dasharray: 792 794;
+        stroke-dashoffset: 793;
+      }
+      
+      .start .osrPRZsM_1 {
+        animation: osrPRZsM_draw 794ms linear 512ms forwards;
+      }
+      
+      .osrPRZsM_2 {
+        stroke-dasharray: 690 692;
+        stroke-dashoffset: 691;
+      }
+      
+      .start .osrPRZsM_2 {
+        animation: osrPRZsM_draw 692ms linear 1307ms forwards;
+      }
+      
+      @keyframes osrPRZsM_draw {
+        100% {
+          stroke-dashoffset: 0;
+        }
+      }
+      
+      @keyframes osrPRZsM_fade {
+        0% {
+          stroke-opacity: 1;
+        }
+        93.54838709677419% {
+          stroke-opacity: 1;
+        }
+        100% {
+          stroke-opacity: 0;
+        }
+      }
+      /* Style */
+      #my-svg * {
+        fill-opacity: 0;
+        transition: fill-opacity 1s;
+      }
+
+      #my-svg.finished * {
+        fill-opacity: 1;
+      }
+    </style>
+  </svg>
+   <script>
+      var myCallback = function(obj){
+        console.log(obj);
+        obj.el.classList.add('finished');
+      };
+      new Vivus('my-svg', {
+          duration: 100, 
+          type: "oneByOne"
+        }, myCallback);
+    </script>
+
+
+</body>
+
+</html>
