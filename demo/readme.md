@@ -1,3 +1,11 @@
+## TODO
+- [ ] 能否有个什么机制可以在中间step中控制classlist 这样可以让某个需要填充的的图形在中间显示出来
+- [ ] 能否单独控制某一个步骤 [prototype.next](https://github.com/maxwellito/vivus/issues/85)
+- [x] 能否整体reverse  option.reverseStack:true
+- [ ] 如何multi 能不能更方便的叠加 - 可以多个实例
+- [ ] 如何跟audio整合
+
+
 ## 文件说明
 
 * original/lines.svg sketch.app 制作出来的

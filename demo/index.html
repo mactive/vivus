@@ -19,17 +19,30 @@
   <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-  <object id="my-svg" type="image/svg+xml" data="lines_animated.svg"></object>
+  <object id="lines" type="image/svg+xml" data="animated/lines_animated.svg"></object>
+  <!--<object id="words_character" type="image/svg+xml" data="animated/words_character_animated.svg"></object>-->
 
   <script>
     var myCallback = function(obj){
       console.log(obj);
-      obj.el.classList.add('finished');
+      if(obj.el){
+        obj.el.classList.add('finished');
+      }
     };
-    new Vivus('my-svg', {
-        duration: 100, 
+    var linesAnimation = new Vivus('lines', {
+        duration: 100,
         type: "oneByOne"
       }, myCallback);
+
+    // new Vivus('words_character', {
+    //     duration: 200,
+    //     reverseStack: true,
+    //     type: "oneByOne"
+    //   }, function(){});
+
+    console.log(linesAnimation.getStatus());
+      linesAnimation.setFrameProgress(0.5);
+
   </script>
 
 
